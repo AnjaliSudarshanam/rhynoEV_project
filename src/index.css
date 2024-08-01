@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #000300;
+}
+/* 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+.hover\:animate-scroll:hover {
+  animation: scroll 10s linear infinite;
+} */
+ html, body, #root, .App {
+  height: 100%;
+}
+/*
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+} */

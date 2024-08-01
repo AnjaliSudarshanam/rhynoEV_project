@@ -1,0 +1,79 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 120px 40px;
+  /* background-color: #BAB408; */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  gap: 16px; /* Add gap between cards */
+  padding: 16px; /* Add padding to avoid cutting off the first and last items */
+  flex-wrap: wrap; /* Ensure the items wrap to the next line */
+  justify-content: center; /* Center the items */
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: calc(100% / 1 - 32px); /* Three cards per row */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.carousel-content {
+  padding: 16px;
+  background-color:#b0ab22;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(108, 112, 91, 0.1);
+  height: 100%; /* Ensure the card takes full height */
+}
+
+.carousel-dots {
+  display: none; /* Hide dots since we're showing all items */
+}
+
+.button-container {
+  display: none; /* Hide buttons since we don't need to navigate */
+}
+
+.carousel-button {
+  padding: 8px 16px;
+  color: black;
+  background-color: #BAB408;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  color:azure;
+}
+
+@media (min-width: 576px) {
+  .carousel-item {
+    width: calc(100% / 1 - 32px); /* Two cards per row for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    width: calc(100% / 1 - 32px); /* Three cards per row for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-item {
+    width: calc(100% / 3 - 32px); /* Four cards per row for large screens */
+  }
+}
